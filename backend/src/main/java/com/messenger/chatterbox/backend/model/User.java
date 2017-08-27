@@ -6,10 +6,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="user")
-public class User {
+public class User extends BaseModel{
 
 	@Id
-	private int id;
+	private long id;
 	
 	private String username;
 	
@@ -17,10 +17,19 @@ public class User {
 	
 	private String password;
 	
-	private int mobileNo;
+	private long mobileNo;
 
 	
-	public int getId() {
+	public User(long id, String username, String emailId, String password, long mobileNo) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.emailId = emailId;
+		this.password = password;
+		this.mobileNo = mobileNo;
+	}
+	
+	public long getId() {
 		return id;
 	}
 
@@ -36,7 +45,7 @@ public class User {
 		return password;
 	}
 
-	public int getMobileNo() {
+	public long getMobileNo() {
 		return mobileNo;
 	}
 	
