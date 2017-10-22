@@ -1,10 +1,11 @@
-package com.messenger.chatterbox.backend.db.dao;
+package com.messenger.chatterbox.backend.db.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.messenger.chatterbox.backend.api.UserDao;
+import com.messenger.chatterbox.backend.db.dao.AbstractDao;
+import com.messenger.chatterbox.backend.db.dao.UserDao;
 import com.messenger.chatterbox.backend.model.User;
 
 @Repository("userDao")
@@ -20,8 +21,7 @@ public class UserDaoImpl extends AbstractDao<User> implements UserDao{
 	}
 
 	public List<User> getAll() {
-		super.getAllEntities();
-		return null;
+		return super.getAllEntities();
 	}
 
 	

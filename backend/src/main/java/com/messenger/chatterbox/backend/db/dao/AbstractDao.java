@@ -25,6 +25,9 @@ public class AbstractDao<T extends BaseModel> {
 	}
 	
 	public List<T> getAllEntities(){
+		/**
+		 * TODO: Need a valid query
+		 */
 		return null;
 	}
 }

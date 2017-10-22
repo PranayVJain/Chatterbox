@@ -1,15 +1,12 @@
-package com.messenger.chatterbox.backend;
+package com.messenger.chatterbox.backend.db.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.messenger.chatterbox.backend.api.IService;
-import com.messenger.chatterbox.backend.api.UserDao;
-import com.messenger.chatterbox.backend.api.UserService;
-import com.messenger.chatterbox.backend.db.dao.UserDaoImpl;
+import com.messenger.chatterbox.backend.db.dao.UserDao;
+import com.messenger.chatterbox.backend.db.dao.UserService;
 import com.messenger.chatterbox.backend.model.User;
 
 
@@ -35,9 +32,8 @@ public class UserServiceImpl implements UserService{
 
 	public List<User> getAll() {
 		// TODO Auto-generated method stub
-		userDao.getAll();
-		List<User> user = null;
-		return user;
+		return userDao.getAll();
+		
 	}
 
 	
