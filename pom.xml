@@ -3,7 +3,7 @@
 	<groupId>com.messenger.chatterbox</groupId>
 	<artifactId>chatterbox</artifactId>
 	<packaging>pom</packaging>
-	<version>0.4-SNAPSHOT</version>
+	<version>0.3-SNAPSHOT</version>
 	<name>chatterbox</name>
 	<url>http://maven.apache.org</url>
 
