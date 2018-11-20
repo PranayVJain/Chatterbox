@@ -12,6 +12,7 @@ import com.messenger.chatterbox.backend.model.User;
 public class UserDaoImpl extends AbstractDao<User> implements UserDao{
 
 	public void save(User user) {
+		int a;
 		super.persist(user);
 		
 	}
