@@ -139,25 +139,25 @@ public class StringUtils {
 
     public void givenCSVFile_whenBufferedReader_thenContentsAsExpected() throws IOException {
         List<List<String>> records = new ArrayList<List<String>>();
-        try (BufferedReader br = new BufferedReader(new FileReader(CSV_FILE))) {
-            String line = "";
-            while ((line = br.readLine()) != null) {
-                String[] values = line.split(COMMA_DELIMITER);
-                records.add(Arrays.asList(values));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        for (int i = 0; i < EXPECTED_ARRAY.size(); i++) {
+        //try (BufferedReader br = new BufferedReader(new FileReader(CSV_FILE))) {
+          //  String line = "";
+            //while ((line = br.readLine()) != null) {
+              //  String[] values = line.split(COMMA_DELIMITER);
+                //records.add(Arrays.asList(values));
+            //}
+        //} catch (Exception e) {
+           // e.printStackTrace();
+        //}
+       // for (int i = 0; i < EXPECTED_ARRAY.size(); i++) {
            /* Assert.assertArrayEquals(EXPECTED_ARRAY.get(i)
                 .toArray(),
                 records.get(i)
                     .toArray());*/
-        }
+        //}
     }
 
     public void givenCSVFile_whenScanner_thenContentsAsExpected() throws IOException {
-        List<List<String>> records = new ArrayList<List<String>>();
+       /* List<List<String>> records = new ArrayList<List<String>>();
         try (Scanner scanner = new Scanner(new File(CSV_FILE));) {
             while (scanner.hasNextLine()) {
                 records.add(getRecordFromLine(scanner.nextLine()));
@@ -169,31 +169,31 @@ public class StringUtils {
             /*Assert.assertArrayEquals(EXPECTED_ARRAY.get(i)
                 .toArray(),
                 records.get(i)
-                    .toArray());*/
-        }
+                    .toArray());
+        }*/
     }
 
     private List<String> getRecordFromLine(String line) {
         List<String> values = new ArrayList<String>();
-        try (Scanner rowScanner = new Scanner(line)) {
+        /*try (Scanner rowScanner = new Scanner(line)) {
             rowScanner.useDelimiter(COMMA_DELIMITER);
             while (rowScanner.hasNext()) {
                 values.add(rowScanner.next());
             }
-        }
+        }*/
         return values;
     }
 
     public void givenCSVFile_whenOpencsv_thenContentsAsExpected() throws IOException {
         List<List<String>> records = new ArrayList<List<String>>();
-        try (CSVReader csvReader = new CSVReader(new FileReader(CSV_FILE));) {
+       /* try (CSVReader csvReader = new CSVReader(new FileReader(CSV_FILE));) {
             String[] values = null;
             while ((values = csvReader.readNext()) != null) {
                 records.add(Arrays.asList(values));
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
         for (int i = 0; i < EXPECTED_ARRAY.size(); i++) {
            /* Assert.assertArrayEquals(EXPECTED_ARRAY.get(i)
                 .toArray(),
