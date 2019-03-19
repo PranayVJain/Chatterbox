@@ -16,6 +16,11 @@ public class DBContext {
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(config.getProperties())
 				.build();
 		sessionFactory = config.buildSessionFactory(serviceRegistry);
+		try{
+			//introduction a code issue for testing
+		}catch(Exception e){
+			
+		}
 	}
 
 	public static DBContext getInstance() {
